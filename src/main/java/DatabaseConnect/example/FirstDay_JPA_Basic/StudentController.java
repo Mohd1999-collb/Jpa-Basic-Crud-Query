@@ -46,10 +46,21 @@ public class StudentController {
         studentService.updateName(studentId);
         return "Student name update successfully";
     }
-    /* get all the student
-       delete a student by studentID
-       delete all the student
-       update the student name by taking studentId
-       find all the student by age 20
-   */
+
+    @GetMapping("/get-student-by-age")
+    public List<Student> getStudentByAge(@RequestParam int age){
+        return studentService.getStudentByAge(age);
+    }
+
+
+    @GetMapping("/get-student-by-age-marks")
+    public List<String> getAllByAgeAndMarks(@RequestParam("age") int age,  @RequestParam("marks") int marks){
+
+        return studentService.getAllByAgeAndMarks(age,marks);
+    }
+
+    @GetMapping("/get-student-by-age-greater")
+    public List<String> getAllByAgeGreaterThan(@RequestParam("age") int age){
+        return studentService.getAllByAgeGreaterThan(age);
+    }
 }

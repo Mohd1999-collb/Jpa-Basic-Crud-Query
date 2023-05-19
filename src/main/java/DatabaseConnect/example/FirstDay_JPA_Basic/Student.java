@@ -21,6 +21,6 @@ public class Student {
     private String name;
     private int marks;
 
-    @OneToOne(mappedBy = "student")
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
     LibraryCard libraryCard;
 }
