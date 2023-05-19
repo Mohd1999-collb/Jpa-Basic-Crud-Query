@@ -1,5 +1,7 @@
-package DatabaseConnect.example.FirstDay_JPA_Basic;
+package DatabaseConnect.example.FirstDay_JPA_Basic.Controller;
 
+import DatabaseConnect.example.FirstDay_JPA_Basic.Student;
+import DatabaseConnect.example.FirstDay_JPA_Basic.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
